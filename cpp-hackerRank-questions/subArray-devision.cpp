@@ -2,21 +2,20 @@
 using namespace std;
 int main()
 {
-    int s[1] = {4};
+    int s[5] = {2, 2, 1, 3, 2};
+    int count = 0;
     int d = 4;
+    int m = 2;
 
-    int m = 1, count = 0;
-
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i <= 5 - m; i++)
     {
-        for (int j = i + 1; j <= m; j++)
+        for (int j = i + 1; j <= i + m; j++)
         {
-            cout << "hello";
-            if (size == 1)
+            if (5 == 1)
             {
                 count++;
-                return 0;
             }
+
             if (s[i] + s[j] == d)
             {
                 if (count < m)
@@ -24,6 +23,6 @@ int main()
             }
         }
     }
-    cout << count;
-    return 0;
+
+    return count;
 }
