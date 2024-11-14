@@ -12,7 +12,6 @@ private:
 public:
     void setData()
     {
-
         cout << "Enter Your Name : ";
         getline(cin, this->name);
         cout << "Enter Your Age : ";
@@ -37,16 +36,8 @@ int main()
 {
 
     Student s1, s2, s3;
-
     s1.setData();
-    s1.getData();
-    cout << endl;
-    cout << endl;
-    s2.setData();
-    s2.getData();
-    cout << endl;
-    cout << endl;
-    s3.setData();
+    s3 = s1;
     s3.getData();
 
     return 0;
