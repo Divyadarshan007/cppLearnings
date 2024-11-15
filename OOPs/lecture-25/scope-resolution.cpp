@@ -17,11 +17,13 @@ public:
         cout << "Enter roll no : ";
         cin >> this->rollNo;
     }
-    void getData()
+    static void getData()
     {
-
+        cout << "age : " << age << endl;
+    }
+    void hetData()
+    {
         cout << "name : " << this->name << endl;
-        cout << "age : " << this->age << endl;
         cout << "roll : " << this->rollNo << endl;
     }
 };
@@ -41,6 +43,7 @@ int main()
     {
         cout << endl;
         arr[i].getData();
+        arr[i].hetData();
     }
 
     return 0;
