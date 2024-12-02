@@ -94,18 +94,36 @@ int main()
         {
         case 1:
         {
+            bool flag = false;
             // Create account
             cout << "Enter Account Number : ";
             cin >> accountNumber;
             cin.ignore();
-            cout << "Enter Name : ";
-            getline(cin, name);
-            cout << "Set Password : ";
-            cin >> password;
 
-            account[count].createAccount(accountNumber, name);
-            account[count].setPassword(password);
-            count++;
+            for (int i = 0; i < count; i++)
+            {
+                if (account[i].getAccNumber() == accountNumber)
+                {
+
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (flag == false)
+            {
+                cout << "Enter Name : ";
+                getline(cin, name);
+                cout << "Set Password : ";
+                cin >> password;
+                account[count].createAccount(accountNumber, name);
+                account[count].setPassword(password);
+                count++;
+            }
+            else
+            {
+                cout << "Account is already Exists ! ";
+            }
 
             break;
         }
