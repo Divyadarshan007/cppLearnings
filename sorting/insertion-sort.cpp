@@ -17,18 +17,18 @@ int main(){
  
 return 0;
 }
-void insertionSort(vector<int> arr, int size){
+void insertionSort(vector<int> arr, int size){                          
     int key;
-    int prev;
+    int j;
     for(int i = 1; i < size; i++){
         key = arr[i];
-        prev = (i - 1);
-        while(prev >= 0 && key < arr[prev]){
-            arr[prev + 1] = arr[prev];
-            prev--;
+        j = (i - 1);
+        while(j >= 0 && key < arr[j] ){
+            arr[j + 1] = arr[j];
+            j--; 
         }
 
-        arr[prev + 1] = key;
+        arr[j + 1] = key;
     }
 
     for(int val : arr){
