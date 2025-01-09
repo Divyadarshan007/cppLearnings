@@ -1,14 +1,13 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 class Node{
     public:
-    int arr[5];
+    vector<int> arr;
     Node* next;
 
-    Node(int arr[]){
-        for(int i = 0; i < 5; i++){
-            this->arr[i] = arr[i];
-        }
+    Node(vector<int> arr){
+        this->arr = arr;
         this->next = nullptr;
     }
 };
@@ -17,11 +16,15 @@ class linkedList{
     public:
     Node* head = nullptr; 
     int count = 0;
-           int arr[5];
   
     void addArray(){
+        int  size;
+        cout<<"Enter the size of an array : ";
+        cin>>size;
+        
+        vector<int> arr(size);
      
-         for(int i = 0; i < 5; i++){
+         for(int i = 0; i < size; i++){
             cout<<"enter value : ";
             cin>>arr[i];
         };
@@ -36,7 +39,7 @@ class linkedList{
         Node* temp = head;
         while(temp != nullptr){
 
-          for(int i = 0; i< 5; i++) {
+          for(int i = 0; i < temp->arr.size(); i++) {
                 cout<<temp->arr[i]<<" ";
           }
             cout<<"->";
